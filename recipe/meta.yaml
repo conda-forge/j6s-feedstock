@@ -10,18 +10,18 @@ source:
   sha256: ee822ccdb53cb1d0dc8949ba7ddadb5f27adf1ec815b6541b274966409363364
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation 
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools
     - wheel
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - sixs_json
 
 test:
@@ -31,6 +31,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/raphidoc/j6s
