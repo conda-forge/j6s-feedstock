@@ -1,5 +1,5 @@
 {% set name = "j6s" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name }}
@@ -10,7 +10,7 @@ source:
   sha256: ee822ccdb53cb1d0dc8949ba7ddadb5f27adf1ec815b6541b274966409363364
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation 
 
