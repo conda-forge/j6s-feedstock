@@ -1,5 +1,5 @@
 {% set name = "j6s" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/raphidoc/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: ee822ccdb53cb1d0dc8949ba7ddadb5f27adf1ec815b6541b274966409363364
+  sha256: 71247c06492914fa15a20ca943d6fe57559fd6e3ab043af56951498010eb9222
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation 
 
